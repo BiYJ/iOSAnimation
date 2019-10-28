@@ -1,14 +1,14 @@
 //
-//  MainVC.m
+//  BasicRootVC.m
 //  iOSAnimation
 //
-//  Created by CYKJ on 2019/10/24.
+//  Created by CYKJ on 2019/10/26.
 //  Copyright © 2019年 D. All rights reserved.
 
 
-#import "MainVC.h"
+#import "BasicRootVC.h"
 
-@interface MainVC () <UITableViewDelegate, UITableViewDataSource>
+@interface BasicRootVC ()  <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView * tableView;
 @property (nonatomic, copy) NSArray * dataArray;
@@ -16,7 +16,7 @@
 @end
 
 
-@implementation MainVC
+@implementation BasicRootVC
 
 - (void)viewDidLoad
 {
@@ -64,7 +64,8 @@
                         @{ @"title" : @"8. 逐帧动画", @"vcSBID" : @"DisplayLinkVC_SBID" },
                         @{ @"title" : @"9. 弹簧动画", @"vcSBID" : @"SpringAnimationVC_SBID" },
                         @{ @"title" : @"10. 关键帧动画（UIView）", @"vcSBID" : @"KeyframeInViewVC_SBID" },
-                        @{ @"title" : @"11. 转场动画（UIView）", @"vcSBID" : @"TransitionInViewVC_SBID" } ];
+                        @{ @"title" : @"11. 转场动画（UIView）", @"vcSBID" : @"TransitionInViewVC_SBID" },
+                        @{ @"title" : @"12. 仿射变换", @"vcSBID" : @"AffineTransformVC_SBID" } ];
     }
     return _dataArray;
 }

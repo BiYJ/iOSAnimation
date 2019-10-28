@@ -7,12 +7,8 @@
 //  Copyright © 2019年 D. All rights reserved.
 
 
-#import <UIKit/UIKit.h>
+#import "BaseBtnVC.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface AnimationGroupVC : UIViewController
+@interface AnimationGroupVC : BaseBtnVC
 
 @end
-
-NS_ASSUME_NONNULL_END

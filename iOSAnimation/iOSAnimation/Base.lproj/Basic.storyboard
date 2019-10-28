@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Qvy-9X-DdA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,26 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--RootNavi-->
-        <scene sceneID="Z6x-F0-cIe">
-            <objects>
-                <navigationController id="Qvy-9X-DdA" userLabel="RootNavi" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jgt-Ns-pkK">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8bA-hv-JdS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k37-og-363" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-638" y="133"/>
-        </scene>
-        <!--首页-->
+        <!--基础-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainVC_SBID" title="首页" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="MainVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BasicRootVC_SBID" title="基础" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="BasicRootVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="srs-GZ-cuq"/>
                         <viewControllerLayoutGuide type="bottom" id="74v-rW-p03"/>
@@ -40,7 +24,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="aDB-Df-qEj" userLabel="TV">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CELL" id="osf-ct-vsn">
                                         <rect key="frame" x="0.0" y="1" width="375" height="60"/>
@@ -65,7 +48,6 @@
                             <constraint firstItem="aDB-Df-qEj" firstAttribute="top" secondItem="srs-GZ-cuq" secondAttribute="bottom" id="pcj-g7-cP6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="首页" id="bF1-wq-3nG"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="aDB-Df-qEj" id="OFf-Sr-Bq6"/>
@@ -73,7 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="133"/>
+            <point key="canvasLocation" x="-639" y="161"/>
         </scene>
         <!--系统隐式动画-->
         <scene sceneID="TyJ-Dt-mbt">
@@ -129,7 +111,7 @@
         <!--代理方法绘图-->
         <scene sceneID="inX-lV-5GO">
             <objects>
-                <viewController storyboardIdentifier="DrawLayerInContextVC_SBID" id="6xv-zN-Zf8" userLabel="代理方法绘图" customClass="DrawLayerInContextVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrawLayerInContextVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="6xv-zN-Zf8" userLabel="代理方法绘图" customClass="DrawLayerInContextVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mHu-9m-3pm"/>
                         <viewControllerLayoutGuide type="bottom" id="O6j-HG-5XL"/>
@@ -147,7 +129,7 @@
         <!--自定义图层绘图-->
         <scene sceneID="CZt-Be-Q3m">
             <objects>
-                <viewController storyboardIdentifier="DrawInContextVC_SBID" id="Yvv-xj-E4k" userLabel="自定义图层绘图" customClass="DrawInContextVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrawInContextVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Yvv-xj-E4k" userLabel="自定义图层绘图" customClass="DrawInContextVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wmI-7g-Kny"/>
                         <viewControllerLayoutGuide type="bottom" id="FG7-Vg-BIe"/>
@@ -165,7 +147,7 @@
         <!--基础动画-->
         <scene sceneID="StO-VZ-ZJA">
             <objects>
-                <viewController storyboardIdentifier="BasicAnimationVC_SBID" id="mwB-mS-K35" userLabel="基础动画" customClass="BasicAnimationVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BasicAnimationVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="mwB-mS-K35" userLabel="基础动画" customClass="BasicAnimationVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PD5-zu-1xD"/>
                         <viewControllerLayoutGuide type="bottom" id="jov-7Q-kwd"/>
@@ -183,7 +165,7 @@
         <!--关键帧动画-->
         <scene sceneID="b6G-mw-4az">
             <objects>
-                <viewController storyboardIdentifier="KeyFrameAnimationVC_SBID" id="lYW-KC-Fqu" userLabel="关键帧动画" customClass="KeyFrameAnimationVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KeyFrameAnimationVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="lYW-KC-Fqu" userLabel="关键帧动画" customClass="KeyFrameAnimationVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WEH-xl-SmI"/>
                         <viewControllerLayoutGuide type="bottom" id="cX3-oQ-RVh"/>
@@ -201,7 +183,7 @@
         <!--动画组-->
         <scene sceneID="AFT-yr-0Mw">
             <objects>
-                <viewController storyboardIdentifier="AnimationGroupVC_SBID" id="Swi-D1-sh6" userLabel="动画组" customClass="AnimationGroupVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnimationGroupVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Swi-D1-sh6" userLabel="动画组" customClass="AnimationGroupVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CYn-F4-mqt"/>
                         <viewControllerLayoutGuide type="bottom" id="Jqk-VF-a6o"/>
@@ -219,7 +201,7 @@
         <!--转场动画-->
         <scene sceneID="H9r-xp-yGi">
             <objects>
-                <viewController storyboardIdentifier="TransitionAnimationVC_SBID" id="Mef-7u-Z92" userLabel="转场动画" customClass="TransitionAnimationVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TransitionAnimationVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Mef-7u-Z92" userLabel="转场动画" customClass="TransitionAnimationVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7c8-3i-Ab3"/>
                         <viewControllerLayoutGuide type="bottom" id="KPP-rT-Oem"/>
@@ -237,7 +219,7 @@
         <!--逐帧动画-->
         <scene sceneID="fFK-pe-dG6">
             <objects>
-                <viewController storyboardIdentifier="DisplayLinkVC_SBID" id="smK-UF-cga" userLabel="逐帧动画" customClass="DisplayLinkVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DisplayLinkVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="smK-UF-cga" userLabel="逐帧动画" customClass="DisplayLinkVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="InD-oB-ATX"/>
                         <viewControllerLayoutGuide type="bottom" id="Tov-sB-M6x"/>
@@ -255,7 +237,7 @@
         <!--弹性动画-->
         <scene sceneID="wUr-px-fOy">
             <objects>
-                <viewController storyboardIdentifier="SpringAnimationVC_SBID" id="S3I-fl-klJ" userLabel="弹性动画" customClass="SpringAnimationVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpringAnimationVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="S3I-fl-klJ" userLabel="弹性动画" customClass="SpringAnimationVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AZI-WE-aq3"/>
                         <viewControllerLayoutGuide type="bottom" id="wEG-UM-n84"/>
@@ -273,7 +255,7 @@
         <!--关键帧动画(inView)-->
         <scene sceneID="nog-lm-86H">
             <objects>
-                <viewController storyboardIdentifier="KeyframeInViewVC_SBID" id="0Kq-Rk-WPf" userLabel="关键帧动画(inView)" customClass="KeyframeInViewVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KeyframeInViewVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="0Kq-Rk-WPf" userLabel="关键帧动画(inView)" customClass="KeyframeInViewVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hnh-57-pkJ"/>
                         <viewControllerLayoutGuide type="bottom" id="vCH-kz-DPf"/>
@@ -291,7 +273,7 @@
         <!--转场动画(inView)-->
         <scene sceneID="GmQ-un-EtV">
             <objects>
-                <viewController storyboardIdentifier="TransitionInViewVC_SBID" id="mZJ-78-Z3r" userLabel="转场动画(inView)" customClass="TransitionInViewVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TransitionInViewVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="mZJ-78-Z3r" userLabel="转场动画(inView)" customClass="TransitionInViewVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xqo-9l-v2q"/>
                         <viewControllerLayoutGuide type="bottom" id="AaU-xd-6wD"/>
@@ -305,6 +287,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xY4-He-DYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="695" y="2213"/>
+        </scene>
+        <!--仿射变换-->
+        <scene sceneID="QTg-Lq-ljk">
+            <objects>
+                <viewController storyboardIdentifier="AffineTransformVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="sXF-X3-Dee" userLabel="仿射变换" customClass="AffineTransformVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4uh-Nh-qhF"/>
+                        <viewControllerLayoutGuide type="bottom" id="GiH-Ax-bDc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rce-hP-bN1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMk-GP-JVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1370" y="2212"/>
         </scene>
     </scenes>
 </document>

@@ -8,15 +8,19 @@
 
 #import "AnimationGroupVC.h"
 
+#define  w(divisor) (SCREEN_WIDTH / (divisor))
+#define  h(divisor) (SCREEN_HEIGHT / (divisor))
+
 static NSString * kBasicAnimationPropertyToValueKey = @"BasicAnimationPropertyToValueKey";
 static NSString * kKeyframeAnimationPropertyEndPointKey = @"KeyframeAnimationPropertyEndPointKey";
-
 
 @interface AnimationGroupVC () <CAAnimationDelegate>
 {
     CALayer * __layer;
+    CALayer * __orangeLayer;
 }
 @end
+
 
 @implementation AnimationGroupVC
 
@@ -35,6 +39,12 @@ static NSString * kKeyframeAnimationPropertyEndPointKey = @"KeyframeAnimationPro
     
     // 创建动画
     [self __groupAnimation];
+    
+    __orangeLayer = [[CALayer alloc] init];
+    __orangeLayer.bounds = CGRectMake(0, 0, 50, 50);
+    __orangeLayer.position = self.view.center;
+    __orangeLayer.backgroundColor = [UIColor orangeColor].CGColor;
+    [self.view.layer addSublayer:__orangeLayer];
 }
 
 /**
@@ -128,6 +138,103 @@ static NSString * kKeyframeAnimationPropertyEndPointKey = @"KeyframeAnimationPro
     
     // 提交事务
     [CATransaction commit];
+}
+
+
+#pragma mark - BaseBtnPTC
+
+- (void)btnClicked:(UIButton *)btn
+{
+    [__orangeLayer removeAllAnimations];
+    
+    switch (btn.tag) {
+        case 0:  // 同时动画
+        {
+            // 旋转动画
+            CABasicAnimation * rotationZ = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+            // toValue = M_PI * 6 等效 toValue = M_PI * 2、duration = 2.0
+//            rotationZ.toValue = @(M_PI * 6);
+            rotationZ.toValue = @(M_PI * 2);
+            rotationZ.duration = 2.0;
+            rotationZ.repeatCount = HUGE_VALF;
+            
+            // 缩放动画。keyPath = @"transform" 时，设置 fromValue 导致动画不生效
+            CABasicAnimation * scaleXY = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+            //scaleXY.fromValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.8, 0.8, 1.0)];
+            //scaleXY.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(2.0, 2.0, 1.0)];
+            scaleXY.fromValue = @(0.8);
+            scaleXY.toValue   = @(2.0);
+            
+            // 位移动画
+            CAKeyframeAnimation * position = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+            NSValue * value0 = [NSValue valueWithCGPoint:CGPointMake(0, h(2.0) - 50)];
+            NSValue * value1 = [NSValue valueWithCGPoint:CGPointMake(w(3.0), h(2.0) - 50)];
+            NSValue * value2 = [NSValue valueWithCGPoint:CGPointMake(w(3.0), h(2.0) + 50)];
+            NSValue * value3 = [NSValue valueWithCGPoint:CGPointMake(w(3.0/2), h(2.0) + 50)];
+            NSValue * value4 = [NSValue valueWithCGPoint:CGPointMake(w(3.0/2), h(2.0) - 50)];
+            NSValue * value5 = [NSValue valueWithCGPoint:CGPointMake(w(1.0), h(2.0) - 50)];
+            position.values = @[ value0, value1, value2, value3, value4, value5 ];
+            
+            CAAnimationGroup * group = [CAAnimationGroup animation];
+            group.animations = @[ rotationZ, scaleXY, position];
+            group.duration = 6.0;
+            [__orangeLayer addAnimation:group forKey:@"ORANGELAYER_GROUP"];
+            
+            // 直接把三个动画添加到 layer 上，也相当于同时动画。这种时候不能自动终止 repeatCount = HUGE_VALF 的动画
+//            [__orangeLayer addAnimation:rotationZ forKey:@"ORANGELAYER_ROTATION_Z"];
+//            scaleXY.duration   = 6.0;
+//            [__orangeLayer addAnimation:scaleXY forKey:@"ORANGELAYER_SCALE_XY"];
+//            position.duration  = 6.0;
+//            [__orangeLayer addAnimation:position forKey:@"ORANGLELAYER_POSITION"];
+        }
+            break;
+            
+        case 1:  // 连续动画
+        {
+            CFTimeInterval begin = CACurrentMediaTime();
+            
+            // 位移动画
+            CABasicAnimation * position = [CABasicAnimation animationWithKeyPath:@"position"];
+            position.fromValue = [NSValue valueWithCGPoint:CGPointMake(0, h(2.0))];
+            position.toValue   = [NSValue valueWithCGPoint:CGPointMake(w(2.0), h(2.0))];
+            position.beginTime = begin;
+            position.duration  = 1.0;
+            position.fillMode  = kCAFillModeForwards;
+            position.removedOnCompletion = NO;
+            [__orangeLayer addAnimation:position forKey:@"ORANGELAYER_POSITION"];
+            
+            // 缩放动画
+            CABasicAnimation * scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+            scale.fromValue = @(0.8);
+            scale.toValue   = @(2.0);
+            scale.beginTime = begin + 1.0;  // 动画开始时间
+            scale.duration  = 1.0;
+            scale.fillMode  = kCAFillModeForwards; // forwards 保留上次动画的状态；backwords 清除上次动画的状态
+            scale.removedOnCompletion = NO;
+            [__orangeLayer addAnimation:scale forKey:@"ORANGELAYER_SCALE"];
+            
+            // 旋转动画
+            CABasicAnimation * rotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+            rotation.toValue   = @(M_PI * 4);
+            rotation.beginTime = begin + 2.0;
+            rotation.duration  = 1.0;
+            rotation.fillMode  = kCAFillModeForwards;
+            rotation.removedOnCompletion = NO;
+            [__orangeLayer addAnimation:rotation forKey:@"ORANGELAYER_ROTATION"];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+#pragma mark - GET
+
+- (NSArray *)btnTitleArray
+{
+    return @[ @"同时动画", @"连续动画" ];
 }
 
 @end

@@ -10,7 +10,7 @@
 
 #define MAX_COL    3    // 列数
 #define LAYER_GAP  30.0 // layer 间的间距
-#define LAYER_WIDTH  (([UIScreen mainScreen].bounds.size.width - (MAX_COL + 1) * LAYER_GAP) / MAX_COL)
+#define LAYER_WIDTH  ((SCREEN_WIDTH - (MAX_COL + 1) * LAYER_GAP) / MAX_COL)
 #define BAR_HEIGHT   ([[UIApplication sharedApplication] statusBarFrame].size.height + 44)
 
 /*！
@@ -47,7 +47,7 @@ static NSInteger col;  // 列
     if (@available(iOS 11.0, *)) {
         self.bgScroll.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
-    self.contentViewHeightConstraint.constant = [UIScreen mainScreen].bounds.size.height - BAR_HEIGHT;
+    self.contentViewHeightConstraint.constant = SCREEN_HEIGHT - BAR_HEIGHT;
     
     row = 0;
     col = 0;
@@ -304,7 +304,7 @@ static NSInteger col;  // 列
     
     CGFloat y = 50 + (20 + LAYER_WIDTH) * row;
     
-    if (y + LAYER_WIDTH > [UIScreen mainScreen].bounds.size.height - BAR_HEIGHT) {
+    if (y + LAYER_WIDTH > SCREEN_HEIGHT - BAR_HEIGHT) {
         self.contentViewHeightConstraint.constant = y + LAYER_WIDTH + 50;
     }
     

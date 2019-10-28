@@ -1,0 +1,17 @@
+//
+//  iOSAnimation-PrefixHeader.pch
+//  iOSAnimation
+//
+//  Created by CYKJ on 2019/10/26.
+//  Copyright © 2019年 D. All rights reserved.
+
+
+#ifndef iOSAnimation_PrefixHeader_pch
+#define iOSAnimation_PrefixHeader_pch
+
+#import "Constants.h"
+
+#define Basic_StoryBoard    @"Basic"
+#define Advance_StoryBoard  @"Advance"
+
+#endif /* iOSAnimation_PrefixHeader_pch */

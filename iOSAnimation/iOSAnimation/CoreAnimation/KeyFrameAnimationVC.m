@@ -8,19 +8,23 @@
 
 #import "KeyFrameAnimationVC.h"
 
-static NSString * kKeyFrameAnimationTranslationKey = @"KeyFrameAnimationTranslationKey";
+#define  w(divisor) (SCREEN_WIDTH / (divisor))
+#define  h(divisor) (SCREEN_HEIGHT / (divisor))
 
+static NSString * kKeyFrameAnimationTranslationKey = @"KeyFrameAnimationTranslationKey";
 
 @interface KeyFrameAnimationVC ()
 {
     CALayer * __layer;
+    CALayer * __orangeLayer;
 }
 @end
 
 
 @implementation KeyFrameAnimationVC
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     // 设置背景（这个图片其实在根图层）
@@ -34,6 +38,12 @@ static NSString * kKeyFrameAnimationTranslationKey = @"KeyFrameAnimationTranslat
     
     // 创建动画
     [self __translationAnimation];
+    
+    __orangeLayer = [[CALayer alloc] init];
+    __orangeLayer.bounds = CGRectMake(0, 0, 50, 50);
+    __orangeLayer.position = self.view.center;
+    __orangeLayer.backgroundColor = [UIColor orangeColor].CGColor;
+    [self.view.layer addSublayer:__orangeLayer];
 }
 
 /**
@@ -84,6 +94,69 @@ static NSString * kKeyFrameAnimationTranslationKey = @"KeyFrameAnimationTranslat
     shape.strokeColor = [UIColor whiteColor].CGColor;
     shape.fillColor = [UIColor clearColor].CGColor;
     [self.view.layer addSublayer:shape];
+}
+
+
+#pragma mark - BaseBtnPTC
+
+- (void)btnClicked:(UIButton *)btn
+{
+    [__orangeLayer removeAllAnimations];
+    
+    switch (btn.tag) {
+        case 0:  // 关键帧
+        {
+            CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+            NSValue * value0 = [NSValue valueWithCGPoint:CGPointMake(0, h(2.0) - 50)];
+            NSValue * value1 = [NSValue valueWithCGPoint:CGPointMake(w(3.0), h(2.0) - 50)];
+            NSValue * value2 = [NSValue valueWithCGPoint:CGPointMake(w(3.0), h(2.0) + 50)];
+            NSValue * value3 = [NSValue valueWithCGPoint:CGPointMake(w(3.0/2), h(2.0) + 50)];
+            NSValue * value4 = [NSValue valueWithCGPoint:CGPointMake(w(3.0/2), h(2.0) - 50)];
+            NSValue * value5 = [NSValue valueWithCGPoint:CGPointMake(w(1.0), h(2.0) - 50)];
+            animation.values = @[ value0, value1, value2, value3, value4, value5];
+            animation.duration = 2.0f;
+            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]; // 设置动画的节奏
+            //animation.delegate = self;  // 设置代理，可以检测动画的开始和结束
+            [__orangeLayer addAnimation:animation forKey:@"ORANGELAYER_POSITION"];
+        }
+            break;
+            
+        case 1:  // 路径
+        {
+            CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+            UIBezierPath * path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(w(2.0) - 100,
+                                                                                    h(2.0) - 100,
+                                                                                    200,
+                                                                                    200)];
+            animation.path = path.CGPath;
+            animation.duration = 2.0;
+            [__orangeLayer addAnimation:animation forKey:@"ORANGELAYER_POSITION"];
+        }
+            break;
+            
+        case 2:  // 抖动
+        {
+            CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
+            NSValue * value0 = [NSNumber numberWithFloat:-M_PI/180.0 * 4];
+            NSValue * value1 = [NSNumber numberWithFloat: M_PI/180.0 * 4];
+            NSValue * value2 = [NSNumber numberWithFloat:-M_PI/180.0 * 4];
+            animation.values = @[ value0, value1, value2 ];
+            animation.repeatCount = MAXFLOAT;
+            [__orangeLayer addAnimation:animation forKey:@"ORANGELAYER_TRANSFORM_ROTATION"];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+#pragma mark - GET
+
+- (NSArray *)btnTitleArray
+{
+    return @[ @"关键帧", @"路径", @"抖动" ];
 }
 
 @end

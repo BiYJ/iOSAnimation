@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--实战-->
+        <scene sceneID="elk-bH-dW5">
+            <objects>
+                <tableViewController storyboardIdentifier="AdvanceRootVC_SBID" title="实战" id="leU-rI-DoN" userLabel="实战" customClass="AdvanceRootVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="1" id="mcd-f8-pFg" userLabel="TV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CELL" id="IDL-gk-Udh" userLabel="Cell">
+                                <rect key="frame" x="0.0" y="1" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IDL-gk-Udh" id="wbW-OF-dj8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="leU-rI-DoN" id="MM5-Zc-n06"/>
+                            <outlet property="delegate" destination="leU-rI-DoN" id="KNo-9H-aar"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yx7-eX-6fJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="152"/>
+        </scene>
+        <!--画企鹅-->
+        <scene sceneID="OeD-X6-SLV">
+            <objects>
+                <viewController storyboardIdentifier="DrawQQVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="VVV-LJ-gm6" userLabel="画企鹅" customClass="DrawQQVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N56-WZ-Qui"/>
+                        <viewControllerLayoutGuide type="bottom" id="vGA-Lz-RX8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lh0-vs-Lqc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAR-tn-QjK">
+                                <rect key="frame" x="59.5" y="205.5" width="256" height="256"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="6dd-4b-ze5"/>
+                                    <constraint firstAttribute="height" constant="256" id="L5H-1u-gdo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UAR-tn-QjK" firstAttribute="centerX" secondItem="Lh0-vs-Lqc" secondAttribute="centerX" id="H17-bG-dno"/>
+                            <constraint firstItem="UAR-tn-QjK" firstAttribute="centerY" secondItem="Lh0-vs-Lqc" secondAttribute="centerY" id="MDy-Sa-eFa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="canvasView" destination="UAR-tn-QjK" id="ddY-xl-AuR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuh-RY-pCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="826"/>
+        </scene>
+        <!--进度-->
+        <scene sceneID="GsL-2x-5hU">
+            <objects>
+                <viewController storyboardIdentifier="ProgressVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Sgk-1l-GmH" userLabel="进度" customClass="ProgressVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F6L-I4-8o2"/>
+                        <viewControllerLayoutGuide type="bottom" id="8YC-9y-lIf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cXz-oh-tlb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37Z-lg-Bo9" customClass="CircleProgress">
+                                <rect key="frame" x="100" y="40" width="175" height="175"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z66-JY-wlO">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="37Z-lg-Bo9" secondAttribute="height" multiplier="1:1" id="1aG-XE-YaY"/>
+                                    <constraint firstItem="z66-JY-wlO" firstAttribute="top" secondItem="37Z-lg-Bo9" secondAttribute="top" id="4kX-fH-6HW"/>
+                                    <constraint firstItem="z66-JY-wlO" firstAttribute="leading" secondItem="37Z-lg-Bo9" secondAttribute="leading" id="Uzc-SE-wnU"/>
+                                    <constraint firstAttribute="bottom" secondItem="z66-JY-wlO" secondAttribute="bottom" id="d56-aT-I4Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="z66-JY-wlO" secondAttribute="trailing" id="jOt-LD-eiK"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="percentLabel" destination="z66-JY-wlO" id="g1j-L9-yM8"/>
+                                </connections>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wbj-j2-Zji">
+                                <rect key="frame" x="48" y="235" width="279" height="31"/>
+                                <color key="tintColor" red="1" green="0.59215686274509804" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vCd-Yc-Iws"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="progressChanged:" destination="Sgk-1l-GmH" eventType="valueChanged" id="cWm-AY-vAG"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rcy-rs-xyu" customClass="LineDashView">
+                                <rect key="frame" x="0.0" y="280" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rcy-rs-xyu" secondAttribute="height" multiplier="1:1" id="2Q4-Yi-2we"/>
+                                    <constraint firstAttribute="width" constant="120" id="KRt-pK-ohp"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1M9-J7-roX" customClass="PieProgressView">
+                                <rect key="frame" x="255" y="280" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1M9-J7-roX" secondAttribute="height" multiplier="1:1" id="IFc-jO-TFG"/>
+                                    <constraint firstAttribute="width" constant="120" id="beC-2F-3dr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rcy-rs-xyu" firstAttribute="leading" secondItem="cXz-oh-tlb" secondAttribute="leading" id="0EZ-kp-YxI"/>
+                            <constraint firstAttribute="trailing" secondItem="37Z-lg-Bo9" secondAttribute="trailing" constant="100" id="7oE-ga-amh"/>
+                            <constraint firstItem="Wbj-j2-Zji" firstAttribute="leading" secondItem="cXz-oh-tlb" secondAttribute="leading" constant="50" id="CjA-ne-G0V"/>
+                            <constraint firstAttribute="trailing" secondItem="Wbj-j2-Zji" secondAttribute="trailing" constant="50" id="Jwd-0m-Ya3"/>
+                            <constraint firstItem="37Z-lg-Bo9" firstAttribute="top" secondItem="F6L-I4-8o2" secondAttribute="bottom" constant="20" id="NpS-Ff-GGA"/>
+                            <constraint firstItem="Rcy-rs-xyu" firstAttribute="top" secondItem="Wbj-j2-Zji" secondAttribute="bottom" constant="15" id="amg-9u-0AY"/>
+                            <constraint firstAttribute="trailing" secondItem="1M9-J7-roX" secondAttribute="trailing" id="bD8-cy-W7w"/>
+                            <constraint firstItem="Wbj-j2-Zji" firstAttribute="top" secondItem="37Z-lg-Bo9" secondAttribute="bottom" constant="20" id="eoK-3u-n7X"/>
+                            <constraint firstItem="37Z-lg-Bo9" firstAttribute="leading" secondItem="cXz-oh-tlb" secondAttribute="leading" constant="100" id="kCO-wd-YVU"/>
+                            <constraint firstItem="1M9-J7-roX" firstAttribute="top" secondItem="Wbj-j2-Zji" secondAttribute="bottom" constant="15" id="mmE-KH-Vqc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="circleProgress" destination="37Z-lg-Bo9" id="Jai-cd-9wC"/>
+                        <outlet property="lineDashView" destination="Rcy-rs-xyu" id="tSO-51-7Dc"/>
+                        <outlet property="pieProgress" destination="1M9-J7-roX" id="MTV-T1-eSW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dal-Mw-vTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="825"/>
+        </scene>
+    </scenes>
+</document>

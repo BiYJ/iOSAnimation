@@ -264,27 +264,59 @@ static CGFloat Margin = 1.0;
 - (void)__addLayoutLayer
 {
     UIBezierPath * path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(60, 60)
-                                                         radius:50
+                                                         radius:25
                                                      startAngle:-M_PI_2
                                                        endAngle:M_PI_2 * 17.0/8
                                                       clockwise:YES];
     
-    CAShapeLayer * shape = [CAShapeLayer layer];
-    shape.frame = self.bounds;
-    shape.fillColor = [UIColor clearColor].CGColor;
-    shape.strokeColor = [UIColor orangeColor].CGColor;
-    shape.lineWidth = 50;
-    shape.path = path.CGPath;
+    CAShapeLayer * bgShape = [CAShapeLayer layer];
+    bgShape.frame = self.bounds;
+    bgShape.fillColor = [UIColor clearColor].CGColor;
+    bgShape.strokeColor = [UIColor orangeColor].CGColor;  // 需要设置绘制颜色
+    bgShape.lineWidth = 50; // 半径的两倍
+    bgShape.path = path.CGPath;
+    bgShape.zPosition = 1;
     
+    self.layer.mask = bgShape;
+//    [self.layer addSublayer:bgShape];
+    
+    CGFloat start = 0.0;
+    CGFloat end   = 0.4;
+    for (NSInteger i = 0; i < 3; i++) {
+        
+        CAShapeLayer * pieLayer = [CAShapeLayer layer];
+        [self.layer addSublayer:pieLayer];
+        pieLayer.strokeStart = start;
+        pieLayer.strokeEnd   = end;
+        pieLayer.lineWidth   = 50;
+        pieLayer.zPosition   = 2;
+        pieLayer.path        = path.CGPath;
+        
+        start = end;
+
+        pieLayer.fillColor = [UIColor clearColor].CGColor;
+        if (i == 0) {
+            pieLayer.strokeColor = RGB(230, 0, 0).CGColor;
+            end += 0.1;
+        }
+        else if (i == 1) {
+            pieLayer.strokeColor = RGB(0, 243, 0).CGColor;
+            end = 1.0;
+        }
+        else {
+            pieLayer.strokeColor = RGB(0, 0, 154).CGColor;
+
+        }
+    }
+
     CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     animation.fromValue = @(0);
     animation.toValue   = @(1);
     animation.duration  = 5;
-    animation.removedOnCompletion = YES;
+    animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
-    [shape addAnimation:animation forKey:@"STROKE_END_ANIMATION"];
     
-    [self.layer addSublayer:shape];
+    [bgShape addAnimation:animation forKey:@"STROKE_END_ANIMATION"];
 }
 
 @end

@@ -36,8 +36,14 @@
     // 由于鱼的图片在循环中会不断创建，而 10 张鱼的照片相对都很小。与其在循环中不断创建 UIImage 不如直接将 10 张图片缓存起来
     __images = [NSMutableArray array];
     
-    for (int i = 0; i < 10; ++i) {
-        NSString * imageName = [NSString stringWithFormat:@"fish%i.png", i];
+//    for (int i = 0; i < 10; ++i) {
+//        NSString * imageName = [NSString stringWithFormat:@"fish%i.png", i];
+//        UIImage * image = [UIImage imageNamed:imageName];
+//        [__images addObject:image];
+//    }
+    
+    for (int i = 0; i < 6; ++i) {
+        NSString * imageName = [NSString stringWithFormat:@"dragon-%i.png", i];
         UIImage * image = [UIImage imageNamed:imageName];
         [__images addObject:image];
     }

@@ -14,6 +14,6 @@
 
 ## 二、贝塞尔曲线简介
 
-在数学的数值分析领域中，贝济埃曲线（英语：Bézier curve，亦作“贝塞尔”）是计算机图形学中相当重要的参数曲线。([贝塞尔曲线扫盲](https://link.jianshu.com/?t=http://www.html-js.com/article/1628))
+在数学的数值分析领域中，贝济埃曲线（英语：Bézier curve，亦作“贝塞尔”）是计算机图形学中相当重要的参数曲线。([贝塞尔曲线扫盲](http://www.html-js.com/article/1628))
 
 贝塞尔曲线对应 iOS 中是 UIBezierPath 对象，它是 CGPathRef 数据类型的封装。path 如果是基于矢量形状的，都用直线和曲线段去创建。我们使用直线段去创建矩形和多边形，使用曲线段去创建弧（arc），圆或者其他复杂的曲线形状。

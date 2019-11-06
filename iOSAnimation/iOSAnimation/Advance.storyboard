@@ -158,5 +158,83 @@
             </objects>
             <point key="canvasLocation" x="561" y="825"/>
         </scene>
+        <!--转场动画A-->
+        <scene sceneID="Zjw-hT-gav">
+            <objects>
+                <viewController storyboardIdentifier="TransitioningVC_A_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="16S-Ae-Jbl" userLabel="转场动画A" customClass="TransitioningVC_A" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d9t-wg-9Av"/>
+                        <viewControllerLayoutGuide type="bottom" id="69n-4R-Sz2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9XA-V0-YzY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngh-I4-k0d">
+                                <rect key="frame" x="173.5" y="309.5" width="28" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ngh-I4-k0d" firstAttribute="centerY" secondItem="9XA-V0-YzY" secondAttribute="centerY" id="bhf-j2-SNv"/>
+                            <constraint firstItem="ngh-I4-k0d" firstAttribute="centerX" secondItem="9XA-V0-YzY" secondAttribute="centerX" id="cPN-Df-OuQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3L1-DM-M8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="824"/>
+        </scene>
+        <!--转场动画B-->
+        <scene sceneID="P2F-dv-ub3">
+            <objects>
+                <viewController storyboardIdentifier="TransitioningVC_B_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="ycW-uc-BOH" userLabel="转场动画B" customClass="TransitioningVC_B" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9ps-Yg-Onh"/>
+                        <viewControllerLayoutGuide type="bottom" id="1tg-Es-oWR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eFg-sM-tCb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-My-4IK">
+                                <rect key="frame" x="174.5" y="309.5" width="26" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.59215686270000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C0y-My-4IK" firstAttribute="centerY" secondItem="eFg-sM-tCb" secondAttribute="centerY" id="Lmc-Xz-bDw"/>
+                            <constraint firstItem="C0y-My-4IK" firstAttribute="centerX" secondItem="eFg-sM-tCb" secondAttribute="centerX" id="tkr-Iy-TEs"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGk-nf-vPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895" y="825"/>
+        </scene>
+        <!--弹幕-->
+        <scene sceneID="qbV-lj-Je1">
+            <objects>
+                <viewController storyboardIdentifier="BarrageVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="DUm-fC-549" userLabel="弹幕" customClass="BarrageVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VXz-9z-ag2"/>
+                        <viewControllerLayoutGuide type="bottom" id="51L-3P-uhD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PMW-5L-pRl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSb-XA-Uvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2558" y="824"/>
+        </scene>
     </scenes>
 </document>

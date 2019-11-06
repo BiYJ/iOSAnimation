@@ -10,6 +10,16 @@
 		AD00151F2366EBF3003EFF50 /* DrawQQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD00151E2366EBF3003EFF50 /* DrawQQVC.m */; };
 		AD00152223670DE5003EFF50 /* ProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD00152123670DE5003EFF50 /* ProgressVC.m */; };
 		AD001524236735CF003EFF50 /* CAShapeLayer.md in Resources */ = {isa = PBXBuildFile; fileRef = AD001523236735CF003EFF50 /* CAShapeLayer.md */; };
+		AD27154023704A21004DFEAB /* TransitionAnimation.png in Resources */ = {isa = PBXBuildFile; fileRef = AD27153823704A21004DFEAB /* TransitionAnimation.png */; };
+		AD27154123704A21004DFEAB /* PopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27153A23704A21004DFEAB /* PopAnimation.m */; };
+		AD27154223704A21004DFEAB /* PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27153B23704A21004DFEAB /* PushAnimation.m */; };
+		AD27154323704A21004DFEAB /* TransitioningVC_A.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27153C23704A21004DFEAB /* TransitioningVC_A.m */; };
+		AD27154423704A21004DFEAB /* TransitioningVC_B.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27153E23704A21004DFEAB /* TransitioningVC_B.m */; };
+		AD27154723704A4E004DFEAB /* BarrageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27154623704A4E004DFEAB /* BarrageVC.m */; };
+		AD27154A23704B2F004DFEAB /* BarrageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27154923704B2F004DFEAB /* BarrageView.m */; };
+		AD27154D23704B3B004DFEAB /* BarrageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27154C23704B3B004DFEAB /* BarrageItem.m */; };
+		AD271551237068E5004DFEAB /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = AD271550237068E5004DFEAB /* UIView+Layout.m */; };
+		AD2715982371182D004DFEAB /* RefactorDestructVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2715972371182D004DFEAB /* RefactorDestructVC.m */; };
 		AD65B6BB236135780007D3DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD65B6BA236135780007D3DC /* AppDelegate.m */; };
 		AD65B6C1236135780007D3DC /* Basic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD65B6BF236135780007D3DC /* Basic.storyboard */; };
 		AD65B6C32361357B0007D3DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD65B6C22361357B0007D3DC /* Assets.xcassets */; };
@@ -101,6 +111,26 @@
 		AD00152023670DE5003EFF50 /* ProgressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressVC.h; sourceTree = "<group>"; };
 		AD00152123670DE5003EFF50 /* ProgressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressVC.m; sourceTree = "<group>"; };
 		AD001523236735CF003EFF50 /* CAShapeLayer.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CAShapeLayer.md; sourceTree = "<group>"; };
+		AD27153723704A21004DFEAB /* TransitioningVC_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitioningVC_A.h; sourceTree = "<group>"; };
+		AD27153823704A21004DFEAB /* TransitionAnimation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TransitionAnimation.png; sourceTree = "<group>"; };
+		AD27153923704A21004DFEAB /* TransitioningVC_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitioningVC_B.h; sourceTree = "<group>"; };
+		AD27153A23704A21004DFEAB /* PopAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimation.m; sourceTree = "<group>"; };
+		AD27153B23704A21004DFEAB /* PushAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAnimation.m; sourceTree = "<group>"; };
+		AD27153C23704A21004DFEAB /* TransitioningVC_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitioningVC_A.m; sourceTree = "<group>"; };
+		AD27153D23704A21004DFEAB /* PopAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimation.h; sourceTree = "<group>"; };
+		AD27153E23704A21004DFEAB /* TransitioningVC_B.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitioningVC_B.m; sourceTree = "<group>"; };
+		AD27153F23704A21004DFEAB /* PushAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAnimation.h; sourceTree = "<group>"; };
+		AD27154523704A4E004DFEAB /* BarrageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarrageVC.h; sourceTree = "<group>"; };
+		AD27154623704A4E004DFEAB /* BarrageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarrageVC.m; sourceTree = "<group>"; };
+		AD27154823704B2F004DFEAB /* BarrageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarrageView.h; sourceTree = "<group>"; };
+		AD27154923704B2F004DFEAB /* BarrageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarrageView.m; sourceTree = "<group>"; };
+		AD27154B23704B3B004DFEAB /* BarrageItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarrageItem.h; sourceTree = "<group>"; };
+		AD27154C23704B3B004DFEAB /* BarrageItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarrageItem.m; sourceTree = "<group>"; };
+		AD27154E23704B63004DFEAB /* BarrageItemPTC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarrageItemPTC.h; sourceTree = "<group>"; };
+		AD27154F237068E5004DFEAB /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		AD271550237068E5004DFEAB /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		AD2715962371182D004DFEAB /* RefactorDestructVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefactorDestructVC.h; sourceTree = "<group>"; };
+		AD2715972371182D004DFEAB /* RefactorDestructVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefactorDestructVC.m; sourceTree = "<group>"; };
 		AD65B6B6236135780007D3DC /* iOSAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD65B6B9236135780007D3DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD65B6BA236135780007D3DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -235,8 +265,44 @@
 				AD00151E2366EBF3003EFF50 /* DrawQQVC.m */,
 				AD00152023670DE5003EFF50 /* ProgressVC.h */,
 				AD00152123670DE5003EFF50 /* ProgressVC.m */,
+				AD27153623704A21004DFEAB /* TransitionAnimation */,
+				AD27153523704A21004DFEAB /* Barrage */,
+				AD2715962371182D004DFEAB /* RefactorDestructVC.h */,
+				AD2715972371182D004DFEAB /* RefactorDestructVC.m */,
 			);
 			path = Advance;
+			sourceTree = "<group>";
+		};
+		AD27153523704A21004DFEAB /* Barrage */ = {
+			isa = PBXGroup;
+			children = (
+				AD27154523704A4E004DFEAB /* BarrageVC.h */,
+				AD27154623704A4E004DFEAB /* BarrageVC.m */,
+				AD27154823704B2F004DFEAB /* BarrageView.h */,
+				AD27154923704B2F004DFEAB /* BarrageView.m */,
+				AD27154E23704B63004DFEAB /* BarrageItemPTC.h */,
+				AD27154B23704B3B004DFEAB /* BarrageItem.h */,
+				AD27154C23704B3B004DFEAB /* BarrageItem.m */,
+				AD27154F237068E5004DFEAB /* UIView+Layout.h */,
+				AD271550237068E5004DFEAB /* UIView+Layout.m */,
+			);
+			path = Barrage;
+			sourceTree = "<group>";
+		};
+		AD27153623704A21004DFEAB /* TransitionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				AD27153823704A21004DFEAB /* TransitionAnimation.png */,
+				AD27153723704A21004DFEAB /* TransitioningVC_A.h */,
+				AD27153C23704A21004DFEAB /* TransitioningVC_A.m */,
+				AD27153923704A21004DFEAB /* TransitioningVC_B.h */,
+				AD27153E23704A21004DFEAB /* TransitioningVC_B.m */,
+				AD27153F23704A21004DFEAB /* PushAnimation.h */,
+				AD27153B23704A21004DFEAB /* PushAnimation.m */,
+				AD27153D23704A21004DFEAB /* PopAnimation.h */,
+				AD27153A23704A21004DFEAB /* PopAnimation.m */,
+			);
+			path = TransitionAnimation;
 			sourceTree = "<group>";
 		};
 		AD65B6AD236135780007D3DC = {
@@ -534,6 +600,7 @@
 				TargetAttributes = {
 					AD65B6B5236135780007D3DC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					AD65B6CD2361357B0007D3DC = {
 						CreatedOnToolsVersion = 10.1;
@@ -599,6 +666,7 @@
 				AD001524236735CF003EFF50 /* CAShapeLayer.md in Resources */,
 				ADE9B351236445FD00B16F2D /* chooser-moment-icon-music@2x.png in Resources */,
 				ADE9B2F223643DDC00B16F2D /* Advance.storyboard in Resources */,
+				AD27154023704A21004DFEAB /* TransitionAnimation.png in Resources */,
 				AD9AA25D2361968000ABC82F /* Flipping_coordinate.jpg in Resources */,
 				ADE9B348236445FD00B16F2D /* chooser-moment-icon-sleep@2x.png in Resources */,
 				AD65B6C1236135780007D3DC /* Basic.storyboard in Resources */,
@@ -634,25 +702,34 @@
 			files = (
 				AD9AA25423618E2500ABC82F /* CustomLayer.m in Sources */,
 				AD65B6F4236138180007D3DC /* CALayerVC.m in Sources */,
+				AD27154123704A21004DFEAB /* PopAnimation.m in Sources */,
 				AD00152223670DE5003EFF50 /* ProgressVC.m in Sources */,
 				ADE9B329236445B600B16F2D /* DCPathCenterButton.m in Sources */,
 				AD9AA2702361D08900ABC82F /* TransitionAnimationVC.m in Sources */,
 				ADE9B326236445B600B16F2D /* DWBubbleMenuButton.m in Sources */,
+				AD27154223704A21004DFEAB /* PushAnimation.m in Sources */,
 				ADE9B328236445B600B16F2D /* DCPathItemButton.m in Sources */,
 				AD00151F2366EBF3003EFF50 /* DrawQQVC.m in Sources */,
 				AD9AA24B23618CD300ABC82F /* DrawInContextVC.m in Sources */,
 				AD9AA2772361D82700ABC82F /* SpringAnimationVC.m in Sources */,
+				AD271551237068E5004DFEAB /* UIView+Layout.m in Sources */,
 				ADE9B30623643FE900B16F2D /* AdvanceNav.m in Sources */,
 				AD9AA27F2361DEFB00ABC82F /* TransitionInViewVC.m in Sources */,
 				AD9AA26223619B1800ABC82F /* BasicAnimationVC.m in Sources */,
+				AD2715982371182D004DFEAB /* RefactorDestructVC.m in Sources */,
 				ADE9B30D2364403300B16F2D /* BasicRootVC.m in Sources */,
+				AD27154323704A21004DFEAB /* TransitioningVC_A.m in Sources */,
+				AD27154723704A4E004DFEAB /* BarrageVC.m in Sources */,
 				AD9AA27C2361DBF600ABC82F /* KeyframeInViewVC.m in Sources */,
 				ADE9B2EE23642FDB00B16F2D /* AffineTransformVC.m in Sources */,
 				AD9AA2732361D59A00ABC82F /* DisplayLinkVC.m in Sources */,
 				ADE9B2E82363E7B600B16F2D /* BaseBtnVC.m in Sources */,
 				ADE9B32B236445B600B16F2D /* MCFireworksView.m in Sources */,
 				ADE9B30723643FE900B16F2D /* BasicNav.m in Sources */,
+				AD27154423704A21004DFEAB /* TransitioningVC_B.m in Sources */,
+				AD27154A23704B2F004DFEAB /* BarrageView.m in Sources */,
 				AD9AA2652361ACC900ABC82F /* KeyFrameAnimationVC.m in Sources */,
+				AD27154D23704B3B004DFEAB /* BarrageItem.m in Sources */,
 				AD9AA26A2361CA5100ABC82F /* AnimationGroupVC.m in Sources */,
 				AD65B6C92361357B0007D3DC /* main.m in Sources */,
 				AD9AA25123618E1800ABC82F /* CustomView.m in Sources */,
@@ -831,6 +908,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSAnimation/iOSAnimation-PrefixHeader.pch";
 				INFOPLIST_FILE = iOSAnimation/Info.plist;
@@ -842,6 +920,10 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -850,6 +932,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSAnimation/iOSAnimation-PrefixHeader.pch";
 				INFOPLIST_FILE = iOSAnimation/Info.plist;
@@ -861,6 +944,9 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

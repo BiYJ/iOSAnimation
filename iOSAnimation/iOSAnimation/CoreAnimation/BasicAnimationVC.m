@@ -16,8 +16,10 @@ static NSString * kBasicAnimationRotationKey = @"BasicAnimationRotationKey";
 {
     CALayer * __layer;
     CALayer * __orangeLayer;
+    CALayer * __purpleLayer;
 }
 @property (nonatomic, strong) CALayer * layer;
+@property (nonatomic, strong) dispatch_source_t timer;
 
 @end
 
@@ -43,6 +45,12 @@ static NSString * kBasicAnimationRotationKey = @"BasicAnimationRotationKey";
     __orangeLayer.bounds = CGRectMake(0, 0, 100, 100);
     __orangeLayer.backgroundColor = [UIColor orangeColor].CGColor;
     [self.view.layer addSublayer:__orangeLayer];
+    
+    __purpleLayer = [[CALayer alloc] init];
+    __purpleLayer.position = CGPointMake(50, 150);
+    __purpleLayer.bounds = CGRectMake(0, 0, 50, 50);
+    __purpleLayer.backgroundColor = [UIColor purpleColor].CGColor;
+    [self.view.layer addSublayer:__purpleLayer];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -260,6 +268,34 @@ static NSString * kBasicAnimationRotationKey = @"BasicAnimationRotationKey";
         }
             break;
             
+        case 5:  // 图层树
+        {
+            CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+            animation.fromValue = @(__purpleLayer.position.x);
+            animation.toValue = @(__purpleLayer.position.x + 150);
+            animation.duration = 2.0;
+            animation.removedOnCompletion = NO;
+            animation.fillMode = kCAFillModeForwards;
+            [__purpleLayer addAnimation:animation forKey:@"PURPLELAYER_LAYERTREE"];
+            
+            NSLog(@"layer = %@\nmodelLayer = %@\npresentationLayer = %@", __purpleLayer, __purpleLayer.modelLayer, __purpleLayer.presentationLayer);
+            
+            static NSUInteger count = 0;
+            _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+            dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC, 0);
+            dispatch_source_set_event_handler(_timer, ^{
+                
+                if (count >= 3) {
+                    dispatch_cancel(self->_timer);
+                }
+                count++;
+                NSLog(@"modelLayerFrame = %@", NSStringFromCGRect(self->__purpleLayer.modelLayer.frame));
+                NSLog(@"presentationLayerFrame = %@", NSStringFromCGRect(self->__purpleLayer.presentationLayer.frame));
+            });
+            dispatch_resume(_timer);
+        }
+            break;
+            
         default:
             break;
     }
@@ -269,7 +305,7 @@ static NSString * kBasicAnimationRotationKey = @"BasicAnimationRotationKey";
 
 - (NSArray *)btnTitleArray
 {
-    return @[ @"位移", @"透明度", @"缩放", @"旋转", @"背景色" ];
+    return @[ @"位移", @"透明度", @"缩放", @"旋转", @"背景色", @"图层树" ];
 }
 
 @end

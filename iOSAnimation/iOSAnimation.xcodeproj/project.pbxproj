@@ -20,6 +20,7 @@
 		AD27154D23704B3B004DFEAB /* BarrageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27154C23704B3B004DFEAB /* BarrageItem.m */; };
 		AD271551237068E5004DFEAB /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = AD271550237068E5004DFEAB /* UIView+Layout.m */; };
 		AD2715982371182D004DFEAB /* RefactorDestructVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2715972371182D004DFEAB /* RefactorDestructVC.m */; };
+		AD506AB4237C505300782CC8 /* TransitioningVC_C.m in Sources */ = {isa = PBXBuildFile; fileRef = AD506AB3237C505300782CC8 /* TransitioningVC_C.m */; };
 		AD65B6BB236135780007D3DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD65B6BA236135780007D3DC /* AppDelegate.m */; };
 		AD65B6C1236135780007D3DC /* Basic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD65B6BF236135780007D3DC /* Basic.storyboard */; };
 		AD65B6C32361357B0007D3DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD65B6C22361357B0007D3DC /* Assets.xcassets */; };
@@ -131,6 +132,8 @@
 		AD271550237068E5004DFEAB /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		AD2715962371182D004DFEAB /* RefactorDestructVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefactorDestructVC.h; sourceTree = "<group>"; };
 		AD2715972371182D004DFEAB /* RefactorDestructVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefactorDestructVC.m; sourceTree = "<group>"; };
+		AD506AB2237C505300782CC8 /* TransitioningVC_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitioningVC_C.h; sourceTree = "<group>"; };
+		AD506AB3237C505300782CC8 /* TransitioningVC_C.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitioningVC_C.m; sourceTree = "<group>"; };
 		AD65B6B6236135780007D3DC /* iOSAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD65B6B9236135780007D3DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD65B6BA236135780007D3DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -301,6 +304,8 @@
 				AD27153B23704A21004DFEAB /* PushAnimation.m */,
 				AD27153D23704A21004DFEAB /* PopAnimation.h */,
 				AD27153A23704A21004DFEAB /* PopAnimation.m */,
+				AD506AB2237C505300782CC8 /* TransitioningVC_C.h */,
+				AD506AB3237C505300782CC8 /* TransitioningVC_C.m */,
 			);
 			path = TransitionAnimation;
 			sourceTree = "<group>";
@@ -732,6 +737,7 @@
 				AD27154D23704B3B004DFEAB /* BarrageItem.m in Sources */,
 				AD9AA26A2361CA5100ABC82F /* AnimationGroupVC.m in Sources */,
 				AD65B6C92361357B0007D3DC /* main.m in Sources */,
+				AD506AB4237C505300782CC8 /* TransitioningVC_C.m in Sources */,
 				AD9AA25123618E1800ABC82F /* CustomView.m in Sources */,
 				ADE9B327236445B600B16F2D /* DCPathButton.m in Sources */,
 				AD65B6BB236135780007D3DC /* AppDelegate.m in Sources */,
@@ -910,6 +916,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XF9U638XV;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSAnimation/iOSAnimation-PrefixHeader.pch";
 				INFOPLIST_FILE = iOSAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -934,6 +941,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XF9U638XV;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSAnimation/iOSAnimation-PrefixHeader.pch";
 				INFOPLIST_FILE = iOSAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -8,7 +8,7 @@
 
 #import "DisplayLinkVC.h"
 
-#define IMAGE_COUNT 10
+#define IMAGE_COUNT 6
 
 
 @interface DisplayLinkVC ()

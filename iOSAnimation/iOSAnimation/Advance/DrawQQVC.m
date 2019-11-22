@@ -16,7 +16,11 @@
     UIBezierPath * __starPath1;
     UIBezierPath * __starPath2;
 }
-@property (weak, nonatomic) IBOutlet UIView * canvasView;
+@property (weak, nonatomic) IBOutlet UIView * qqCanvasView;
+@property (weak, nonatomic) IBOutlet UIView * transformCanvasView1;
+@property (nonatomic, weak) CALayer * transformLayer1;
+@property (nonatomic, weak) CALayer * transformLayer2;
+@property (nonatomic, weak) CAGradientLayer * transformShadowLayer;
 
 @end
 
@@ -29,6 +33,7 @@
 
     [self __startDrawStar];
     [self __startDrawQQ];
+    [self __startDrawTransform];
 }
 
 
@@ -107,7 +112,7 @@
 
 #pragma mark - QQ
 /**
-  *  @brief  开始绘制
+  *  @brief  开始绘制 🐧
   */
 - (void)__startDrawQQ
 {
@@ -313,7 +318,7 @@
     shape.opacity     = 0; // 隐藏
     shape.path = path;
     
-    [self.canvasView.layer addSublayer:shape];
+    [self.qqCanvasView.layer addSublayer:shape];
 
     return shape;
 }
@@ -327,9 +332,83 @@
     shape.opacity = 0;  // 隐藏
     shape.path = path;
     
-    [self.canvasView.layer addSublayer:shape];
+    [self.qqCanvasView.layer addSublayer:shape];
     
     return shape;
+}
+
+
+#pragma mark - Transform
+/**
+  *  @brief   绘制折叠效果。https://www.jianshu.com/p/67077a2d9641
+  */
+- (void)__startDrawTransform
+{
+    UIImage * image = [UIImage imageNamed:@"hy"];
+    
+    CGRect rect = self.transformCanvasView1.bounds;
+    rect.size.height /= 2;
+    
+    CALayer * layer1 = [[CALayer alloc] init];
+    layer1.bounds = rect;
+    layer1.position = CGPointMake(rect.size.width/2, rect.size.height);
+    layer1.contents = (id)image.CGImage;
+    layer1.contentsRect = CGRectMake(0, 0, 1, 0.5);
+    layer1.anchorPoint = CGPointMake(0.5, 1);
+    [self.transformCanvasView1.layer addSublayer:layer1];
+    self.transformLayer1 = layer1;
+    
+    CALayer * layer2 = [[CALayer alloc] init];
+    layer2.bounds = rect;
+    layer2.position = CGPointMake(rect.size.width/2, rect.size.height);
+    layer2.contents = (id)image.CGImage;
+    layer2.contentsRect = CGRectMake(0, 0.5, 1, 0.5);
+    layer2.anchorPoint = CGPointMake(0.5, 0);
+    [self.transformCanvasView1.layer addSublayer:layer2];
+    self.transformLayer2 = layer2;
+    
+    // 创建渐变图层
+    CAGradientLayer * shadowLayer = [CAGradientLayer layer];
+    shadowLayer.colors = @[(id)[UIColor clearColor],(id)[[UIColor blackColor] CGColor]];
+    shadowLayer.frame = layer1.frame;
+    shadowLayer.opacity = 0;
+    [self.transformCanvasView1.layer insertSublayer:shadowLayer atIndex:0];
+    self.transformShadowLayer = shadowLayer;
+    
+    [self.transformCanvasView1 addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                                        action:@selector(pan:)]];
+}
+
+- (void)pan:(UIPanGestureRecognizer *)sender
+{
+    if (sender.state == UIGestureRecognizerStateChanged) {
+        // 获取手指偏移量
+        CGPoint transP = [sender translationInView:self.view];
+        
+        // 初始化形变
+        CATransform3D transform3D = CATransform3DIdentity;
+
+        // 设置 M34 就有立体感(近大远小)。 -1 / z ,z表示观察者在z轴上的值,z越小，看起来离我们越近，东西越大。
+        transform3D.m34 = -1 / 1000.0;
+        
+        // 计算折叠角度，因为需要逆时针旋转，所以取反
+        CGFloat angle = -transP.y / _transformLayer1.frame.size.height * M_PI;
+        
+        _transformLayer1.transform = CATransform3DRotate(transform3D, angle, 1, 0, 0);
+        
+        // 设置阴影不透明度
+        _transformShadowLayer.opacity = transP.y / _transformLayer1.frame.size.height;
+    }
+    else if (sender.state == UIGestureRecognizerStateEnded) { // 手指抬起
+        // 还原
+        [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.1 initialSpringVelocity:3 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            
+            self->_transformLayer1.transform = CATransform3DIdentity;
+            // 还原阴影
+            self->_transformShadowLayer.opacity = 0;
+            
+        } completion:nil];
+    }
 }
 
 @end

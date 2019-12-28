@@ -229,6 +229,24 @@
             </objects>
             <point key="canvasLocation" x="1895" y="825"/>
         </scene>
+        <!--波浪进度条-->
+        <scene sceneID="Cyo-XL-dsv">
+            <objects>
+                <viewController storyboardIdentifier="WaveProgressVC_SBID" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Bqz-MS-pbr" userLabel="波浪进度条" customClass="WaveProgressVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WZj-GO-VAg"/>
+                        <viewControllerLayoutGuide type="bottom" id="wp8-I0-Ow7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MsQ-yY-VcA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUs-Gp-dTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="1527"/>
+        </scene>
         <!--弹幕-->
         <scene sceneID="qbV-lj-Je1">
             <objects>

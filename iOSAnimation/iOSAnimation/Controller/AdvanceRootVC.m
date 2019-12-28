@@ -56,7 +56,8 @@
         _dataArray = @[ @{ @"title" : @"1. 画企鹅", @"vcSBID" : @"DrawQQVC_SBID" },
                         @{ @"title" : @"2. 进度条", @"vcSBID" : @"ProgressVC_SBID" },
                         @{ @"title" : @"3. 转场动画", @"vcSBID" : @"TransitioningVC_A_SBID" },
-                        @{ @"title" : @"4. 弹幕", @"vcSBID" : @"BarrageVC_SBID" } ];
+                        @{ @"title" : @"4. 弹幕", @"vcSBID" : @"BarrageVC_SBID" },
+                        @{ @"title" : @"5. 波浪进度", @"vcSBID" : @"WaveProgressVC_SBID" } ];
     }
     return _dataArray;
 }

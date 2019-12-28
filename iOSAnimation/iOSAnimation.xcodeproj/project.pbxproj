@@ -10,6 +10,7 @@
 		AD00151F2366EBF3003EFF50 /* DrawQQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD00151E2366EBF3003EFF50 /* DrawQQVC.m */; };
 		AD00152223670DE5003EFF50 /* ProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD00152123670DE5003EFF50 /* ProgressVC.m */; };
 		AD001524236735CF003EFF50 /* CAShapeLayer.md in Resources */ = {isa = PBXBuildFile; fileRef = AD001523236735CF003EFF50 /* CAShapeLayer.md */; };
+		AD0E7D9D23B09A6B00274619 /* UberAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E7D9C23B09A6B00274619 /* UberAnimationVC.m */; };
 		AD27154023704A21004DFEAB /* TransitionAnimation.png in Resources */ = {isa = PBXBuildFile; fileRef = AD27153823704A21004DFEAB /* TransitionAnimation.png */; };
 		AD27154123704A21004DFEAB /* PopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27153A23704A21004DFEAB /* PopAnimation.m */; };
 		AD27154223704A21004DFEAB /* PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD27153B23704A21004DFEAB /* PushAnimation.m */; };
@@ -51,6 +52,7 @@
 		AD9AA27F2361DEFB00ABC82F /* TransitionInViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9AA27E2361DEFB00ABC82F /* TransitionInViewVC.m */; };
 		AD9AA2822361E4A500ABC82F /* CoreAnimation1.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9AA2802361E4A500ABC82F /* CoreAnimation1.png */; };
 		AD9AA2832361E4A500ABC82F /* CoreAnimation2.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9AA2812361E4A500ABC82F /* CoreAnimation2.png */; };
+		ADC4505D23B25B6D0031E50F /* WaveProgressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC4505C23B25B6D0031E50F /* WaveProgressVC.m */; };
 		ADE9B2E82363E7B600B16F2D /* BaseBtnVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE9B2E72363E7B600B16F2D /* BaseBtnVC.m */; };
 		ADE9B2EE23642FDB00B16F2D /* AffineTransformVC.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE9B2ED23642FDB00B16F2D /* AffineTransformVC.m */; };
 		ADE9B2F023643DCA00B16F2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE9B2EF23643DCA00B16F2D /* Main.storyboard */; };
@@ -112,6 +114,8 @@
 		AD00152023670DE5003EFF50 /* ProgressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressVC.h; sourceTree = "<group>"; };
 		AD00152123670DE5003EFF50 /* ProgressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressVC.m; sourceTree = "<group>"; };
 		AD001523236735CF003EFF50 /* CAShapeLayer.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CAShapeLayer.md; sourceTree = "<group>"; };
+		AD0E7D9B23B09A6B00274619 /* UberAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UberAnimationVC.h; sourceTree = "<group>"; };
+		AD0E7D9C23B09A6B00274619 /* UberAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UberAnimationVC.m; sourceTree = "<group>"; };
 		AD27153723704A21004DFEAB /* TransitioningVC_A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitioningVC_A.h; sourceTree = "<group>"; };
 		AD27153823704A21004DFEAB /* TransitionAnimation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TransitionAnimation.png; sourceTree = "<group>"; };
 		AD27153923704A21004DFEAB /* TransitioningVC_B.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitioningVC_B.h; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 		AD9AA27E2361DEFB00ABC82F /* TransitionInViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionInViewVC.m; sourceTree = "<group>"; };
 		AD9AA2802361E4A500ABC82F /* CoreAnimation1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoreAnimation1.png; sourceTree = "<group>"; };
 		AD9AA2812361E4A500ABC82F /* CoreAnimation2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoreAnimation2.png; sourceTree = "<group>"; };
+		ADC4505B23B25B6D0031E50F /* WaveProgressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaveProgressVC.h; sourceTree = "<group>"; };
+		ADC4505C23B25B6D0031E50F /* WaveProgressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaveProgressVC.m; sourceTree = "<group>"; };
 		ADE9B2E62363E7B600B16F2D /* BaseBtnVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseBtnVC.h; sourceTree = "<group>"; };
 		ADE9B2E72363E7B600B16F2D /* BaseBtnVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseBtnVC.m; sourceTree = "<group>"; };
 		ADE9B2E92363EB6000B16F2D /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -272,6 +278,10 @@
 				AD27153523704A21004DFEAB /* Barrage */,
 				AD2715962371182D004DFEAB /* RefactorDestructVC.h */,
 				AD2715972371182D004DFEAB /* RefactorDestructVC.m */,
+				AD0E7D9B23B09A6B00274619 /* UberAnimationVC.h */,
+				AD0E7D9C23B09A6B00274619 /* UberAnimationVC.m */,
+				ADC4505B23B25B6D0031E50F /* WaveProgressVC.h */,
+				ADC4505C23B25B6D0031E50F /* WaveProgressVC.m */,
 			);
 			path = Advance;
 			sourceTree = "<group>";
@@ -732,6 +742,7 @@
 				ADE9B32B236445B600B16F2D /* MCFireworksView.m in Sources */,
 				ADE9B30723643FE900B16F2D /* BasicNav.m in Sources */,
 				AD27154423704A21004DFEAB /* TransitioningVC_B.m in Sources */,
+				AD0E7D9D23B09A6B00274619 /* UberAnimationVC.m in Sources */,
 				AD27154A23704B2F004DFEAB /* BarrageView.m in Sources */,
 				AD9AA2652361ACC900ABC82F /* KeyFrameAnimationVC.m in Sources */,
 				AD27154D23704B3B004DFEAB /* BarrageItem.m in Sources */,
@@ -740,6 +751,7 @@
 				AD506AB4237C505300782CC8 /* TransitioningVC_C.m in Sources */,
 				AD9AA25123618E1800ABC82F /* CustomView.m in Sources */,
 				ADE9B327236445B600B16F2D /* DCPathButton.m in Sources */,
+				ADC4505D23B25B6D0031E50F /* WaveProgressVC.m in Sources */,
 				AD65B6BB236135780007D3DC /* AppDelegate.m in Sources */,
 				ADE9B316236441B700B16F2D /* AdvanceRootVC.m in Sources */,
 				ADE9B32A236445B600B16F2D /* MCFireworksButton.m in Sources */,
